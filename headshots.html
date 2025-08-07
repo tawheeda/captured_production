@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Headshots | Captured Production</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo-link">
+        <img src="logo.jpg" alt="Captured Logo" class="logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="bookings.html">Booking</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section>
+  <h2>Headshots</h2><br>
+  <p>Professional, clean headshots for your portfolio, LinkedIn, and branding needs.</p>
+
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="headshot1.jpg" alt="Headshot 1"></div>
+      <div class="swiper-slide"><img src="headshot2.jpg" alt="Headshot 2"></div>
+      <div class="swiper-slide"><img src="headshot3.jpg" alt="Headshot 3"></div>
+      <div class="swiper-slide"><img src="headshot4.jpg" alt="Headshot 4"></div>
+      <div class="swiper-slide"><img src="headshot5.jpg" alt="Headshot 5"></div>
+      <div class="swiper-slide"><img src="headshot6.jpg" alt="Headshot 6"></div>
+      <div class="swiper-slide"><img src="headshot7.jpg" alt="Headshot 7"></div>
+      <div class="swiper-slide"><img src="headshot8.jpg" alt="Headshot 8"></div>
+    </div>
+
+    <div class="swiper-pagination"></div>
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  const swiper = new Swiper(".swiper", {
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 20,
+    centeredSlides: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+</body>
+</html>

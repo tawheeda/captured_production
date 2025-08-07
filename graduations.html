@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Graduation Shoots | Captured Production</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo-link">
+        <img src="logo.jpg" alt="Captured Logo" class="logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="bookings.html">Booking</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Graduation Shoots</h2>
+    <p>Moments of pride and achievement—captured forever.</p>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="grad1.jpg" alt="Grad 1"></div>
+        <div class="swiper-slide"><img src="grad2.jpg" alt="Grad 2"></div>
+        <div class="swiper-slide"><img src="grad3.jpg" alt="Grad 3"></div>
+        <div class="swiper-slide"><img src="grad4.jpg" alt="Grad 4"></div>
+        <div class="swiper-slide"><img src="grad5.jpg" alt="Grad 5"></div>
+        <div class="swiper-slide"><img src="grad6.jpg" alt="Grad 6"></div>
+        <div class="swiper-slide"><img src="grad7.jpg" alt="Grad 7"></div>
+        <div class="swiper-slide"><img src="grad8.jpg" alt="Grad 8"></div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    const swiper = new Swiper(".swiper", {
+      loop: true,
+      grabCursor: true,
+      spaceBetween: 20,
+      centeredSlides: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+</body>
+</html>
