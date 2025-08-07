@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book a Service | Captured Production</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo-link">
+        <img src="logo.jpg" alt="Captured Logo" class="logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="bookings.html" class="active">Booking</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="booking">
+    <h2>Book a Service</h2>
+    <p>Please complete the form below. We'll contact you with an invoice after reviewing your booking.</p>
+
+    <form id="bookingForm" onsubmit="return submitBooking();">
+      <label for="name">Full Name *</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address *</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone Number *</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <label for="event-date">Event Date *</label>
+      <input type="date" id="event-date" name="event-date" required />
+
+      <label for="service">Select a Service *</label>
+      <select id="service" name="service" required>
+        <option value="">-- Select --</option>
+        <option>Wedding Photography</option>
+        <option>Event Coverage</option>
+        <option>Portrait Session</option>
+        <option>Music Video</option>
+        <option>Drone Footage</option>
+        <option>Corporate Video</option>
+        <option>Social Media Content</option>
+        <option>Other</option>
+      </select>
+
+      <label for="message">Additional Notes</label>
+      <textarea id="message" name="message" rows="5"></textarea>
+
+      <button type="submit">Submit Booking</button>
+    </form>
+  </section>
+
+  <script>
+    function submitBooking() {
+      alert("Thank you for your booking. We will send you an invoice shortly.");
+      document.getElementById("bookingForm").reset();
+      return false; // Prevent actual submission
+    }
+  </script>
+</body>
+</html>
