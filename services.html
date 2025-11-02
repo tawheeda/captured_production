@@ -3,65 +3,152 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services | Captured Production</title>
+  <title>Services | Captured Production Services</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo-link">
-        <img src="logo.jpg" alt="Captured Logo" class="logo">
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="bookings.html">Booking</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo-link">
+          <img src="logo.jpg" alt="Captured Production Services logo" class="logo">
+        </a>
+        <div class="nav-toggle" id="navToggle">
+          <span></span><span></span><span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="bookings.html">Booking</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section id="services">
-    <h2>Our Services</h2><br>
-    <h3>Photography</h3><br>
-    <div class="grid-list">
-      <div>Weddings & Engagements</div>
-      <div>Event Coverage (birthdays, corporate, etc.)</div>
-      <div>Portraits & Headshots</div>
-      <div>Product & Brand Photography</div>
-      <div>Lifestyle & Fashion Shoots</div>
-    </div>
-    <br>
-    <h3>Videography</h3><br>
-    <div class = "grid-list">
-      <div>Wedding Films & Highlights</div>
-      <div>Music Videos</div>
-      <div>Corporate & Promotional Videos</div>
-      <div>Event Recaps</div>
-      <div>Short-Form Social Content (Reels, TikToks, etc.)</div>
-    </div>
-    <br>
-    <h3>Additional Services</h3><br>
-    <div class = "grid-list">
-      <div>Drone Photography/ <br> Videography</div>
-      <div>Photo Album & Prints</div>
-      <div>Video Editing & Color Grading</div>
-      <div>Behind-the-Scenes (BTS) Content</div>
-      <div>Social Media Content Packages</div>
-    </div>
-    
-  </section><br>
-<footer>
-  <h2>Contact Us</h2>
-  <p>📞 064 811 2011 | 📞 082 263 2832</p>
-  <p><a href = "https://www.instagram.com/_captured_production?igsh=NW1pbG51Z3B1eHRj" style="color: #ffffff; text-decoration: none;"> <strong>Instagram </strong></a></p>
-  <p>&copy; All Rights Reserved | Website Designed and Maintained by 
-    <a href="https://tawheeda.github.io/tawheedaa/#" style="color: #ffffff; text-decoration: none;">
-      <strong>LT Dev Studio</strong>
-    </a>
-  </p>
-</footer>
+  <!-- Intro -->
+  <section id="services" style="padding-bottom: 2.5rem;">
+    <div class="container">
+      <div class="section-heading" style="text-align: left;">
+        <h2>Our Services</h2>
+        <p>Photography, video and content production for brands, events & people.</p>
+      </div>
+      <p style="max-width: 720px; color: #555; margin-bottom: 2.2rem;">
+        Choose the category that matches your shoot. If you don’t see what you need, tell us — we also do custom packages
+        for agencies, churches, TV shows and social media creators.
+      </p>
 
-  
-  </body>
-  </html>
+      <!-- Photography -->
+      <h3 style="margin-bottom: 1rem;">Photography</h3>
+      <div class="grid-list">
+        <div>
+          <strong>Weddings & Engagements</strong><br>
+          Classic, emotional coverage of your day.
+        </div>
+        <div>
+          <strong>Event Coverage</strong><br>
+          Birthdays, corporate, conferences, church services.
+        </div>
+        <div>
+          <strong>Portraits & Headshots</strong><br>
+          Studio or on-location, clean backgrounds.
+        </div>
+        <div>
+          <strong>Product & Brand Photography</strong><br>
+          For websites, social and campaigns.
+        </div>
+        <div>
+          <strong>Lifestyle & Fashion Shoots</strong><br>
+          Outdoor, editorial, lookbooks.
+        </div>
+      </div>
+
+      <!-- Videography -->
+      <h3 style="margin-top: 2.5rem; margin-bottom: 1rem;">Videography</h3>
+      <div class="grid-list">
+        <div>
+          <strong>Wedding Films & Highlights</strong><br>
+          Full-day coverage + cinematic edit.
+        </div>
+        <div>
+          <strong>Music Videos</strong><br>
+          Performance, story-driven, or hybrid.
+        </div>
+        <div>
+          <strong>Corporate & Promotional Videos</strong><br>
+          Brand stories, interviews, talking heads.
+        </div>
+        <div>
+          <strong>Event Recaps</strong><br>
+          Quick turnaround highlights for social.
+        </div>
+        <div>
+          <strong>Short-Form Social Content</strong><br>
+          Reels, TikToks, YouTube Shorts.
+        </div>
+      </div>
+
+      <!-- Extra -->
+      <h3 style="margin-top: 2.5rem; margin-bottom: 1rem;">Additional Services</h3>
+      <div class="grid-list">
+        <div>
+          <strong>Drone Photography / Videography</strong><br>
+          Licensed, cinematic aerials.
+        </div>
+        <div>
+          <strong>Photo Album & Prints</strong><br>
+          For weddings, graduations & families.
+        </div>
+        <div>
+          <strong>Video Editing & Color Grading</strong><br>
+          Send us your footage, we finish it.
+        </div>
+        <div>
+          <strong>Behind-the-Scenes (BTS)</strong><br>
+          Social-ready BTS content on set.
+        </div>
+        <div>
+          <strong>Social Media Content Packages</strong><br>
+          Monthly content days for creators/brands.
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div style="margin-top: 3rem; text-align: center;">
+        <p style="color: #555;">Not sure which package is right for you?</p>
+        <a href="bookings.html" class="btn-primary" style="margin-top: 0.7rem;">Book a session / request a quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>📞 064 811 2011 | 📞 082 263 2832</p>
+      <p>
+        <a href="https://www.instagram.com/_captured_production?igsh=NW1pbG51Z3B1eHRj" style="color: #ffffff; text-decoration: none;">
+          <strong>Instagram</strong>
+        </a>
+      </p>
+      <p>© All Rights Reserved | Website Designed and Maintained by 
+        <a href="https://tawheeda.github.io/tawheedaa/#" style="color: #ffffff; text-decoration: none;">
+          <strong>LT Dev Studio</strong>
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- mobile nav -->
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
+    }
+  </script>
+</body>
+</html>

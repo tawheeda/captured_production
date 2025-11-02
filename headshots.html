@@ -3,69 +3,116 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Headshots | Captured Production</title>
+  <title>Headshots | Captured Production Services</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo-link">
-        <img src="logo.jpg" alt="Captured Logo" class="logo">
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-        <li><a href="bookings.html">Booking</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo-link">
+          <img src="logo.jpg" alt="Captured Production Services logo" class="logo">
+        </a>
+        <div class="nav-toggle" id="navToggle">
+          <span></span><span></span><span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="bookings.html">Booking</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-<section>
-  <h2>Headshots</h2><br>
-  <p>Professional, clean headshots for your portfolio, LinkedIn, and branding needs.</p>
-
-  <div class="swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="headshot1.jpg" alt="Headshot 1"></div>
-      <div class="swiper-slide"><img src="headshot2.jpg" alt="Headshot 2"></div>
-      <div class="swiper-slide"><img src="headshot3.jpg" alt="Headshot 3"></div>
-      <div class="swiper-slide"><img src="headshot4.jpg" alt="Headshot 4"></div>
-      <div class="swiper-slide"><img src="headshot5.jpg" alt="Headshot 5"></div>
-      <div class="swiper-slide"><img src="headshot6.jpg" alt="Headshot 6"></div>
-      <div class="swiper-slide"><img src="headshot7.jpg" alt="Headshot 7"></div>
-      <div class="swiper-slide"><img src="headshot8.jpg" alt="Headshot 8"></div>
+  <!-- Page intro -->
+  <section style="padding-bottom: 2rem;">
+    <div class="container">
+      <a href="projects.html" style="color: #a51a1a; font-weight: 500; font-size: 0.85rem; text-decoration: none; display: inline-block; margin-bottom: 1.2rem;">← Back to Projects</a>
+      <div class="section-heading" style="text-align: left; margin-bottom: 1.3rem;">
+        <h2>Headshots</h2>
+        <p>Professional, clean headshots for your portfolio, LinkedIn, casting and personal branding.</p>
+      </div>
+      <p style="max-width: 640px; color: #555; margin-bottom: 1.5rem;">
+        Consistent lighting, flattering angles and crisp editing — captured in studio or on-location in Johannesburg.
+        Browse the gallery below to see the look & feel. Ready to shoot? Book a time slot at the bottom.
+      </p>
     </div>
+  </section>
 
-    <div class="swiper-pagination"></div>
+  <!-- Gallery -->
+  <section style="padding-top: 0;">
+    <div class="container">
+      <div class="swiper" style="background: #000; border-radius: 14px;">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="headshot1.jpg" alt="Professional headshot 1"></div>
+          <div class="swiper-slide"><img src="headshot2.jpg" alt="Professional headshot 2"></div>
+          <div class="swiper-slide"><img src="headshot3.jpg" alt="Professional headshot 3"></div>
+          <div class="swiper-slide"><img src="headshot4.jpg" alt="Professional headshot 4"></div>
+          <div class="swiper-slide"><img src="headshot5.jpg" alt="Professional headshot 5"></div>
+          <div class="swiper-slide"><img src="headshot6.jpg" alt="Professional headshot 6"></div>
+          <div class="swiper-slide"><img src="headshot7.jpg" alt="Professional headshot 7"></div>
+          <div class="swiper-slide"><img src="headshot8.jpg" alt="Professional headshot 8"></div>
+        </div>
 
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-  </div>
-</section>
+        <!-- pagination + nav -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <!-- CTA -->
+      <div style="text-align: center; margin-top: 2.4rem;">
+        <a href="bookings.html" class="btn-primary">Book a headshot session</a>
+        <p style="margin-top: 0.6rem; color: #777; font-size: 0.88rem;">Studio & on-location options available.</p>
+      </div>
+    </div>
+  </section>
 
-<script>
-  const swiper = new Swiper(".swiper", {
-    loop: true,
-    grabCursor: true,
-    spaceBetween: 20,
-    centeredSlides: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-</script>
+  <!-- Footer (optional, reuse from index) -->
+  <footer>
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>📞 064 811 2011</p>
+      <p>📞 082 263 2832</p>
+      <p>📷 @capturedproductionservices</p>
+      <p style="margin-top: 1.2rem; font-size: 0.8rem; opacity: 0.7;">© Captured Production Services</p>
+    </div>
+  </footer>
+
+  <!-- Swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".swiper", {
+      loop: true,
+      grabCursor: true,
+      spaceBetween: 20,
+      centeredSlides: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+    // mobile nav
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
+    }
+  </script>
 </body>
 </html>

@@ -1,3 +1,19 @@
+/* === Root / Tokens === */
+:root {
+  --bg: #ffffff;
+  --text: #222222;
+  --muted: #666;
+  --primary: #a51a1a;
+  --primary-dark: #870d0d;
+  --surface: #ffffff;
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 3px 12px rgba(0, 0, 0, 0.12);
+  --container: 1100px;
+  --space-section: clamp(3rem, 5vw, 4.5rem);
+}
+
 /* === Reset & Base === */
 * {
   box-sizing: border-box;
@@ -7,40 +23,66 @@
 
 body {
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #ffffff;
-  color: #222222;
+  background-color: var(--bg);
+  color: var(--text);
   line-height: 1.8;
   font-size: 16px;
 }
 
+/* Utility */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
 /* === Typography === */
-h2 {
-  font-size: 2rem;
-  color: #000000;
-  border-bottom: 2px solid #a51a1a;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1.5rem;
+h1, h2, h3 {
+  letter-spacing: -0.03em;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-heading h2 {
+  font-size: clamp(1.9rem, 4vw, 2.4rem);
+  color: #000;
+  display: inline-block;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 0.4rem;
+}
+
+.section-heading p {
+  color: var(--muted);
+  margin-top: 0.7rem;
+  max-width: 580px;
+  margin-inline: auto;
+  font-size: 0.97rem;
 }
 
 /* === Navigation Bar === */
 header {
   background-color: #000;
-  padding: 0.8rem 0;
+  padding: 0.7rem 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 50;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 2rem;
+  gap: 1.5rem;
 }
 
 .logo-link {
   display: flex;
   align-items: center;
+  gap: 0.7rem;
 }
 
 .logo {
@@ -49,7 +91,7 @@ header {
   max-height: 40px;
 }
 
-/* === Nav Links === */
+/* Nav links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -64,7 +106,7 @@ header {
   color: #ffffff;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.97rem;
   transition: color 0.3s ease;
   padding: 0.4rem 0;
   display: inline-block;
@@ -78,7 +120,7 @@ header {
   bottom: -4px;
   height: 2px;
   width: 0%;
-  background-color: #a51a1a;
+  background-color: var(--primary);
   transition: width 0.3s ease;
 }
 
@@ -89,15 +131,125 @@ header {
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #a51a1a;
+  color: var(--primary);
+}
+
+/* (Optional) mobile trigger */
+.nav-toggle {
+  display: none;
+  width: 32px;
+  height: 32px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  background: #fff;
+  height: 3px;
+  border-radius: 999px;
+  width: 100%;
+}
+
+/* === Hero (for homepage) === */
+.hero {
+  padding: clamp(3.5rem, 5vw, 5rem) 0 3rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero-content {
+  flex: 1 1 50%;
+}
+
+.hero-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 4vw, 3rem);
+  line-height: 1.05;
+  margin-bottom: 1.2rem;
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 520px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-media {
+  flex: 1 1 45%;
+  background: #0f0f0f;
+  border-radius: 14px;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.2);
+}
+
+.hero-media img,
+.hero-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* === Section Layout === */
 section {
-  padding: 3rem 1.5rem;
-  max-width: 1100px;
-  margin: auto;
+  padding: var(--space-section) 0;
+}
+
+section.centered {
   text-align: center;
+}
+
+/* === Buttons === */
+.button,
+button,
+.btn-primary {
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: 0.65rem 1.3rem;
+  border: none;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+  display: inline-flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.button:hover,
+button:hover,
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(165, 26, 26, 0.25);
+}
+
+.btn-outline {
+  background: rgba(165, 26, 26, 0.1);
+  color: #fff;
+  border: 1px solid rgba(165, 26, 26, 0.4);
+  border-radius: 999px;
+  padding: 0.6rem 1.1rem;
 }
 
 /* === Project Grid === */
@@ -109,16 +261,17 @@ section {
 }
 
 .project-card {
-  background: #ffffff;
-  border-radius: 10px;
+  background: var(--surface);
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: left;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 14px 25px rgba(0, 0, 0, 0.15);
 }
 
 .project-card img {
@@ -128,18 +281,17 @@ section {
 }
 
 .project-card p {
-  padding: 0.8rem;
+  padding: 1rem 1.1rem 1.2rem;
   font-weight: 500;
   color: #222;
 }
 
-/* === Swiper Slideshow (v11 compliant) === */
+/* === Swiper === */
 .swiper {
-  width: 90%;
-  max-width: 1000px;
+  width: min(1000px, 90%);
   height: 70vh;
   margin: 30px auto;
-  border-radius: 10px;
+  border-radius: 14px;
   overflow: hidden;
 }
 
@@ -148,139 +300,44 @@ section {
   justify-content: center;
   align-items: center;
   height: 100%;
-  background-color: #f9f9f9;
+  background-color: #0f0f0f;
 }
 
 .swiper-slide img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0);
 }
 
-/* === Blockquotes === */
-blockquote {
-  margin: 2rem 0;
-  padding-left: 1.2rem;
-  border-left: 4px solid #a51a1a;
-  font-style: italic;
-  color: #555;
-  font-size: 1.1rem;
-}
-
-/* === Footer === */
-footer {
-  background-color: #000000;
-  color: #ffffff;
-  text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.95rem;
-}
-
-footer h2 {
-  color: #a51a1a;
-  margin-bottom: 0.5rem;
-}
-
-footer p {
-  margin: 0.4rem 0;
-}
-
-/* === Buttons === */
-.button,
-button {
-  background-color: #a51a1a;
-  color: #ffffff;
-  padding: 0.6rem 1.2rem;
-  border: none;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-}
-
-.button:hover,
-button:hover {
-  background-color: #870d0d;
-}
-
-/* === Form === */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 600px;
-  margin: 2rem auto;
-}
-
-form label {
-  font-weight: 600;
-}
-
-form input,
-form select,
-form textarea {
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-family: inherit;
-}
-
-form input:focus,
-form select:focus,
-form textarea:focus {
-  border-color: #a51a1a;
-  outline: none;
-}
-
-form button {
-  background-color: #a51a1a;
-  color: white;
-  padding: 0.8rem 1.2rem;
-  border: none;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-form button:hover {
-  background-color: #870d0d;
-}
-
-/* === Grid Lists (Services / Clients) === */
+/* === Grids (services / clients) === */
 .grid-list,
 .client-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 2rem;
-  margin-top: 1rem;
+  gap: 1.6rem;
+  margin-top: 1.4rem;
 }
 
 .grid-list div,
 .client-card {
   background: #ffffff;
-  padding: 1rem;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 1.1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.04);
+  box-shadow: var(--shadow-sm);
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .grid-list div:hover,
 .client-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
 }
 
 .client-card img {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  border-radius: 10px;
   object-fit: cover;
   aspect-ratio: 1 / 1;
 }
@@ -292,11 +349,111 @@ form button:hover {
   color: #222;
 }
 
+/* === Blockquotes === */
+blockquote {
+  margin: 2rem 0 0;
+  padding-left: 1.2rem;
+  border-left: 4px solid var(--primary);
+  font-style: italic;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+/* === Form === */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 2rem auto 0;
+}
+
+form label {
+  font-weight: 600;
+}
+
+form input,
+form select,
+form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: rgba(165, 26, 26, 0.6);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(165, 26, 26, 0.15);
+}
+
+form button {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: var(--primary-dark);
+}
+
+/* === Footer === */
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 2.5rem 1rem 2.6rem;
+  font-size: 0.95rem;
+  margin-top: 3rem;
+}
+
+footer h2 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+footer p {
+  margin: 0.4rem 0;
+  color: rgba(255,255,255,0.65);
+}
+
 /* === Responsive === */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-content {
+    order: 1;
+  }
+  .hero p {
+    margin-inline: auto;
+  }
+  .hero-actions {
+    justify-content: center;
+  }
+  .hero-media {
+    width: min(500px, 100%);
+  }
+}
+
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+  }
+
+  .nav-toggle {
+    display: flex;
   }
 
   .nav-links {
@@ -304,6 +461,11 @@ form button:hover {
     width: 100%;
     gap: 1rem;
     margin-top: 1rem;
+    display: none; /* show with JS when toggled */
+  }
+
+  .nav-links.show {
+    display: flex;
   }
 
   form {

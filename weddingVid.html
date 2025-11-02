@@ -3,98 +3,137 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Wedding Videos | Captured Production</title>
+  <title>Wedding Videos | Captured Production Services</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo-link">
-        <img src="logo.jpg" alt="Captured Logo" class="logo">
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-        <li><a href="bookings.html">Booking</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo-link">
+          <img src="logo.jpg" alt="Captured Production Services logo" class="logo">
+        </a>
+        <div class="nav-toggle" id="navToggle">
+          <span></span><span></span><span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="bookings.html">Booking</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-<section>
-  <h2>Wedding Videos</h2><br>
-  <p>Relive the magic of your special day with our cinematic wedding videos.</p>
+  <!-- Page intro -->
+  <section style="padding-bottom: 2rem;">
+    <div class="container">
+      <a href="projects.html" style="color: #a51a1a; font-weight: 500; font-size: 0.85rem; text-decoration: none; display: inline-block; margin-bottom: 1.2rem;">← Back to Projects</a>
+      <div class="section-heading" style="text-align: left; margin-bottom: 1.3rem;">
+        <h2>Wedding Videos</h2>
+        <p>Relive the magic of your day — the vows, the speeches, the dancing.</p>
+      </div>
+      <p style="max-width: 640px; color: #555; margin-bottom: 1.5rem;">
+        We film weddings in a cinematic, documentary style: real emotions, beautiful sound, clean editing. 
+        Whether it’s an intimate garden ceremony or a big celebration, we capture it so you can share it forever.
+      </p>
+    </div>
+  </section>
 
-  <div class="swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <video controls width="100%">
-          <source src="weddingVid1.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+  <!-- Video slider -->
+  <section style="padding-top: 0;">
+    <div class="container">
+      <div class="swiper" style="background: #000; border-radius: 14px; padding: 1rem 0;">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="display: flex; justify-content: center; align-items: center;">
+            <video controls style="width: min(100%, 960px); border-radius: 12px; outline: none;">
+              <source src="weddingVid1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="swiper-slide" style="display: flex; justify-content: center; align-items: center;">
+            <video controls style="width: min(100%, 960px); border-radius: 12px; outline: none;">
+              <source src="weddingVid2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="swiper-slide" style="display: flex; justify-content: center; align-items: center;">
+            <video controls style="width: min(100%, 960px); border-radius: 12px; outline: none;">
+              <source src="weddingVid3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="swiper-slide" style="display: flex; justify-content: center; align-items: center;">
+            <video controls style="width: min(100%, 960px); border-radius: 12px; outline: none;">
+              <source src="weddingVid4.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <!-- pagination + nav -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
-      <div class="swiper-slide">
-        <video controls width="100%">
-          <source src="weddingVid2.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="swiper-slide">
-        <video controls width="100%">
-          <source src="weddingVid3.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="swiper-slide">
-        <video controls width="100%">
-          <source src="weddingVid4.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+
+      <!-- CTA -->
+      <div style="text-align: center; margin-top: 2.4rem;">
+        <a href="bookings.html" class="btn-primary">Enquire about wedding film</a>
+        <p style="margin-top: 0.6rem; color: #777; font-size: 0.88rem;">Full-day coverage • Highlight film • Social reels.</p>
       </div>
     </div>
+  </section>
 
-    <div class="swiper-pagination"></div>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>📞 064 811 2011</p>
+      <p>📞 082 263 2832</p>
+      <p>📷 @capturedproductionservices</p>
+      <p style="margin-top: 1.2rem; font-size: 0.8rem; opacity: 0.7;">© Captured Production Services</p>
+    </div>
+  </footer>
 
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-  </div>
-</section>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  const swiper = new Swiper(".swiper", {
-    loop: true,
-    grabCursor: true,
-    spaceBetween: 20,
-    centeredSlides: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    on: {
-      slideChange: function () {
-        // Pause and reset all videos on slide change
-        document.querySelectorAll('.swiper-slide video').forEach(video => {
-          video.pause();
-          video.currentTime = 0;
-        });
-
-        // Optional: autoplay the current slide's video
-        /*
-        const activeVideo = swiper.slides[swiper.activeIndex].querySelector('video');
-        if (activeVideo) {
-          activeVideo.play();
+  <!-- Swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".swiper", {
+      loop: true,
+      grabCursor: true,
+      spaceBetween: 20,
+      centeredSlides: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      on: {
+        slideChange: function () {
+          // Pause + reset all videos when changing slides
+          document.querySelectorAll('.swiper-slide video').forEach(video => {
+            video.pause();
+            video.currentTime = 0;
+          });
         }
-        */
       }
+    });
+
+    // mobile nav
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
     }
-  });
-</script>
+  </script>
 </body>
 </html>

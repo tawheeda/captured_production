@@ -3,86 +3,141 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projects | Captured Production</title>
+  <title>Projects | Captured Production Services</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo-link">
-        <img src="logo.jpg" alt="Captured Logo" class="logo">
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-        <li><a href="bookings.html">Booking</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo-link">
+          <img src="logo.jpg" alt="Captured Production Services logo" class="logo">
+        </a>
+        <div class="nav-toggle" id="navToggle">
+          <span></span><span></span><span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="bookings.html">Booking</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section>
-    <h2>Our Projects</h2>
-    <p>Here’s a showcase of our recent work. Click on any project to view the full album.</p>
-    <div class="project-grid">
-      <a href="outdoor.html" class="project-card">
-        <img src="outdoor.jpg" alt="Outdoor Shoots">
-        <p>Outdoor Shoots</p>
-      </a>
-
-      <a href="weddings.html" class="project-card">
-        <img src="wedding.jpg" alt="Wedding Shoots">
-        <p>Wedding Shoots</p>
-      </a>
-
-      <a href="graduations.html" class="project-card">
-        <img src="grad.jpg" alt="Graduation Shoots">
-        <p>Graduation Shoots</p>
-      </a>
-
-      <a href="headshots.html" class="project-card">
-        <img src="headshot.jpg" alt="Headshots">
-        <p>Headshots</p>
-      </a>
-      
-      <a href="carshoot.html" class="project-card">
-        <img src="carshoot.jpg" alt="Car Shoots">
-        <p>Car Shoots</p>
-      </a>
-
-      <a href="eventshoot.html" class="project-card">
-        <img src="eventshoot.jpg" alt="Event Shoots">
-        <p>Event Shoots</p>
-      </a>
-
-      <a href="weddingVid.html" class="project-card">
-        <img src="weddingVid.jpg" alt="Wedding Videos">
-        <p>Wedding Videos</p>
-      </a>
-
-      <a href="eventVid.html" class="project-card">
-        <img src="eventVid.jpg" alt="Event Videos">
-        <p>Event Videos</p>
-      </a>
-
-
+  <!-- Page intro -->
+  <section style="padding-bottom: 1.8rem;">
+    <div class="container">
+      <div class="section-heading" style="text-align: left;">
+        <h2>Our Projects</h2>
+        <p>Photo, video and event coverage done for brands, shows, weddings and individuals.</p>
+      </div>
+      <p style="max-width: 650px; color: #555;">
+        Browse a category to see a full gallery / reel. Each project page uses real work — not stock —
+        so you can see our lighting, framing and colour style. When you're ready, book a date.
+      </p>
     </div>
   </section>
-  <br>
 
+  <!-- Photo projects -->
+  <section style="padding-top: 0;">
+    <div class="container">
+      <h3 style="margin-bottom: 1.2rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.14em; color: #a51a1a;">Photo</h3>
+      <div class="project-grid">
+        <a href="headshots.html" class="project-card">
+          <img src="headshot.jpg" alt="Headshots photography">
+          <p>Headshots</p>
+        </a>
+
+        <a href="graduations.html" class="project-card">
+          <img src="grad.jpg" alt="Graduation shoots">
+          <p>Graduation Shoots</p>
+        </a>
+
+        <a href="weddings.html" class="project-card">
+          <img src="wedding.jpg" alt="Wedding photography">
+          <p>Wedding Shoots</p>
+        </a>
+
+        <a href="eventshoot.html" class="project-card">
+          <img src="eventshoot.jpg" alt="Event photography">
+          <p>Event Shoots</p>
+        </a>
+
+        <a href="carshoot.html" class="project-card">
+          <img src="carshoot.jpg" alt="Car photography">
+          <p>Car Shoots</p>
+        </a>
+
+        <a href="outdoor.html" class="project-card">
+          <img src="outdoor.jpg" alt="Outdoor / lifestyle shoots">
+          <p>Outdoor / Lifestyle</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video projects -->
+  <section style="padding-top: 2.5rem;">
+    <div class="container">
+      <h3 style="margin-bottom: 1.2rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.14em; color: #a51a1a;">Video</h3>
+      <div class="project-grid">
+        <a href="weddingVid.html" class="project-card">
+          <img src="weddingVid.jpg" alt="Cinematic wedding videos">
+          <p>Wedding Videos</p>
+        </a>
+
+        <a href="eventVid.html" class="project-card">
+          <img src="eventVid.jpg" alt="Event video highlights">
+          <p>Event Videos</p>
+        </a>
+
+        <!-- ready for future stuff -->
+        <a href="musicVideos.html" class="project-card" style="display: none;">
+          <img src="musicVideo.jpg" alt="Music videos">
+          <p>Music Videos</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding-top: 2.5rem;">
+    <div class="container" style="text-align: center;">
+      <p style="color: #555;">Can’t see the type of shoot you want?</p>
+      <a href="bookings.html" class="btn-primary" style="margin-top: 0.6rem;">Tell us what you need</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <h2>Contact Us</h2>
-    <p>📞 064 811 2011 | 📞 082 263 2832</p>
-    <p>
-      <a href="https://www.instagram.com/_captured_production?igsh=NW1pbG51Z3B1eHRj" style="color: #ffffff; text-decoration: none;">
-        <strong>Instagram</strong>
-      </a>
-    </p>
-    <p>&copy; All Rights Reserved | Website Designed and Maintained by 
-      <a href="https://tawheeda.github.io/tawheedaa/#" style="color: #ffffff; text-decoration: none;">
-        <strong>LT Dev Studio</strong>
-      </a>
-    </p>
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>📞 064 811 2011 | 📞 082 263 2832</p>
+      <p>
+        <a href="https://www.instagram.com/_captured_production?igsh=NW1pbG51Z3B1eHRj" style="color: #ffffff; text-decoration: none;">
+          <strong>Instagram</strong>
+        </a>
+      </p>
+      <p>© All Rights Reserved | Website designed & maintained by 
+        <a href="https://tawheeda.github.io/tawheedaa/#" style="color: #ffffff; text-decoration: none;">
+          <strong>LT Dev Studio</strong>
+        </a>
+      </p>
+    </div>
   </footer>
+
+  <!-- mobile nav -->
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
+    }
+  </script>
 </body>
 </html>
